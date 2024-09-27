@@ -42,10 +42,12 @@ DEPENDANT_DEDUCTION = 3000.00 # Float
 
 
 # Request imputs
-
+gross_income = float(input("Enter the gross income: "))
+num_dep = int(input("Enter the number of dependents: "))
 
 # Compute income tax
-
+taxable_in = gross_income - STANDARD_DEDUCTION - DEPENDANT_DEDUCTION * num_dep
+income_tax = taxable_in * TAX_RATE
 
 # Display income tax
-
+print("Your inncome tax, based on your taxable income of", taxable_in, "is", income_tax, ".")
